@@ -72,7 +72,7 @@ B3: create account MQTT broker (example HiveMQ) like:
 ...waiting to write...
 
 
-### to use 'Neo 6M GPS sensor'
+### to use 'Neo 6M GPS sensor' with MQTT broker HiveMQ
 - Follow this link: https://sparklers-the-makers.github.io/blog/robotics/use-neo-6m-module-with-raspberry-pi/
 
 Note: Fix problem "ERROR V4L2 v4l2_videodevice.cpp:1906 /dev/video0[18:cap]: Failed to start streaming: Invalid argument"
@@ -80,6 +80,16 @@ Note: Fix problem "ERROR V4L2 v4l2_videodevice.cpp:1906 /dev/video0[18:cap]: Fai
 ![image](https://github.com/user-attachments/assets/a6ab3abc-87ca-4a1b-9518-9bcf46997492)
 
 OK.
+Result...:
+![image](https://github.com/user-attachments/assets/75d301e2-0262-43d9-ac70-7d4c96331fd6)
+![image](https://github.com/user-attachments/assets/7294b3e2-2400-41b8-8084-c8d77d5da37e)
 
+> Code file GPS_PUB_SUB.py
+
+
+
+### Image processing, Detect Red-Yellow-Green real-time with MQTT broker HiveMQ
+
+> Code file DETECT_RYB_PUBSUB.py
 
 
