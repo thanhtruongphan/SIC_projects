@@ -1,4 +1,5 @@
 # SIC_projects
+>> Do all of comment line on virtual environment...
 
 ### Switch to 'master' branch to see the project...
 
@@ -15,6 +16,8 @@ B2: test camera with comment line:
 
 Note: follow link documentation "https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf" or code:
 
+> To install opencv, follow this link: https://pypi.org/project/opencv-python/#manual-builds
+>>> pip install opencv-contrib-python
 ##### start code
 import cv2
 from picamera2 import Picamera2 
