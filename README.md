@@ -72,6 +72,14 @@ B3: create account MQTT broker (example HiveMQ) like:
 ...waiting to write...
 
 
+### to use 'Neo 6M GPS sensor'
+- Follow this link: https://sparklers-the-makers.github.io/blog/robotics/use-neo-6m-module-with-raspberry-pi/
+
+Note: Fix problem "ERROR V4L2 v4l2_videodevice.cpp:1906 /dev/video0[18:cap]: Failed to start streaming: Invalid argument"
+> follow this link: https://github.com/raspberrypi/libcamera/issues/104
+![image](https://github.com/user-attachments/assets/a6ab3abc-87ca-4a1b-9518-9bcf46997492)
+
+OK.
 
 
 
