@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>RaspberryPi Visuallization</title>
+<style type="text/css">
+    .auto-style1 {
+        border: 1px solid #808080;
+    }
+    .auto-style2 {
+        border: 1px solid #808080;
+    }
+</style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<body>
+    <center>
+        <br>
+        <strong>Temperature, Humidity Data Visuallization</strong>
+        <br>
+        <br>
+        <br>
+        <table style="width: 100%">
+            <tr>
+                <td width="50%">
+                    <table cellspacing="1" class="auto-style1" style="width: 100%">
+                        {% for i in result%}
+                        <tr>
+                            <td class="auto-style2" style="width: 50%">Time: {{ i[0] }}</td>
+                            <td class="auto-style2" style="width: 50%">Temperature: {{ i[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </td>
+                <td width="50%">
+                    <div>
+                        <canvas id="Chart"></canvas>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+        <br>
+    </center>
+</body>
+</html>
+<script>
+    var ctx = document.getElementById('Chart').getContext('2d');
+    var data = {
+        // The type of chart we want to create
+        type: 'line',
+        // The data for our dataset
+        data: {
+            labels: [ 
+                {% for i in result %}
+                '{{ i[0] }}',
+                {% endfor %}
+            ],
+            datasets: [{
+                label: "Temperature",
+                backgroundColor: 'rgb(255, 120, 132)',
+                fill: false,
+                borderColor: 'rgb(255, 128, 132)',
+                lineTension: 0.8,
+                data: [
+                    {% for i in result %}
+                    {{ i[1] }},
+                    {% endfor %}
+                ],
+            }]
+        },
+        // Configuration options go here
+        options: {
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        suggestedMin: 0, 
+                        suggestedMax: 100
+                    }
+
+                }],
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 10, // Y axis min
+                        suggestedMax: 50 // Y axis max
+                    }
+                }]
+            }
+        }
+    }
+    var chart = new Chart(ctx, data);
+</script>
+
+
